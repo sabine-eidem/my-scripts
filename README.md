@@ -5,14 +5,20 @@ This repository contains a collection of scripts and configuration files for var
 ## Directory Structure
 ```
 my-scripts/
-── config/
-│   ├── .tmux.conf
-│   ├── .vimrc
-│   └── config.fish
+├── config/
+│ ├── tmux/
+│ │ ├── .tmux.conf
+│ │ └── tmux_script.sh
+│ ├── vim/
+│ │ ├── .vimrc
+│ │ └── vim_script.sh
+│ └── fish/
+│ ├── config.fish
+│ └── fish_script.sh
 ├── scripts/
-│   ├── install_arch_cli_tools.sh
-│   ├── install_ubuntu_cli_tools.sh
-│   └── other_script.sh
+│ ├── install_arch_cli_tools.sh
+│ ├── install_ubuntu_cli_tools.sh
+│ └── other_script.sh
 └── setup.sh
 ```
 
