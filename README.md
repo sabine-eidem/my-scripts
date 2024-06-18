@@ -4,17 +4,29 @@ This repository contains a collection of scripts and configuration files for var
 
 ## Directory Structure
 my-scripts/
+
 ├── README.md
+
 ├── ubuntu-scripts/
+
 │ └── install_packages.sh
+
 ├── arch-scripts/
+
 │ └── install_packages.sh
+
 ├── tmux-config/
+
 │ └── .tmux.conf
+
 ├── vim-config/
+
 │ └── .vimrc
+
 └── fish-config/
+
 └── config.fish
+
 
 
 
