@@ -6,20 +6,18 @@ This repository contains a collection of scripts and configuration files for var
 ```
 my-scripts/
 ├── config/
-│ ├── tmux/
-│ │ ├── .tmux.conf
-│ │ └── tmux_script.sh
-│ ├── vim/
-│ │ ├── .vimrc
-│ │ └── vim_script.sh
-│ └── fish/
-│ ├── config.fish
-│ └── fish_script.sh
+│   ├── tmux/
+│   │   └── .tmux.conf
+│   ├── vim/
+│   │   └── .vimrc
+│   └── fish/
+│       └── config.fish
 ├── scripts/
-│ ├── install_arch_cli_tools.sh
-│ ├── install_ubuntu_cli_tools.sh
-│ └── other_script.sh
+│   ├── install_arch_cli_tools.sh
+│   ├── install_ubuntu_cli_tools.sh
+│   └── other_script.sh
 └── setup.sh
+
 ```
 
 
