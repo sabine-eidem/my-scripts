@@ -3,30 +3,24 @@
 This repository contains a collection of scripts and configuration files for various tasks and setups. It includes scripts for both Ubuntu and Arch-based systems, as well as configuration files for `tmux`, `vim`, and `fish shell`.
 
 ## Directory Structure
+```
 my-scripts/
-
-├── README.md
-
-├── ubuntu-scripts/
-
-│ └── install_packages.sh
-
-├── arch-scripts/
-
-│ └── install_packages.sh
-
-├── tmux-config/
-
-│ └── .tmux.conf
-
-├── vim-config/
-
-│ └── .vimrc
-
-└── fish-config/
-
-└── config.fish
-
+├── config/
+│ ├── tmux/
+│ │ ├── .tmux.conf
+│ │ └── tmux_script.sh
+│ ├── vim/
+│ │ ├── .vimrc
+│ │ └── vim_script.sh
+│ └── fish/
+│ ├── config.fish
+│ └── fish_script.sh
+├── scripts/
+│ ├── install_arch_cli_tools.sh
+│ ├── install_ubuntu_cli_tools.sh
+│ └── other_script.sh
+└── setup.sh
+```
 
 
 
