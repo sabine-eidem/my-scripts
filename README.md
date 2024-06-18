@@ -3,6 +3,7 @@
 This repository contains a collection of scripts and configuration files for various tasks and setups. It includes scripts for both Ubuntu and Arch-based systems, as well as configuration files for `tmux`, `vim`, and `fish shell`.
 
 ## Directory Structure
+```
 my-scripts/
 ── config/
 │   ├── .tmux.conf
@@ -13,7 +14,7 @@ my-scripts/
 │   ├── install_ubuntu_cli_tools.sh
 │   └── other_script.sh
 └── setup.sh
-
+```
 
 
 
