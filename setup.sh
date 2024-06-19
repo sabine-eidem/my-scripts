@@ -35,7 +35,7 @@ install_packages() {
     local packages=(git vim nano emacs tmux screen gcc clang make cmake python3 nodejs npm python3-pip cargo htop btop procps du df free iostat sysstat lsblk fdisk blkid parted curl wget openssh-client rsync net-tools inetutils-tools iproute2 traceroute nmap network-manager dnsutils whois fish bash zsh fzf ripgrep silversearcher-ag bat exa tldr jq yq ncdu neofetch man-db)
 
     case "$distro" in
-        arch)
+        arch|manjaro)
             run_command "sudo pacman -S --noconfirm ${packages[@]}"
             ;;
         ubuntu)
@@ -48,9 +48,9 @@ install_packages() {
     esac
 }
 
-# Install AUR packages for Arch Linux
+# Install AUR packages for Arch and Manjaro Linux
 install_aur_packages() {
-    if [ "$distro" = "arch" ]; then
+    if [[ "$distro" = "arch" || "$distro" = "manjaro" ]]; then
         run_command "git clone https://aur.archlinux.org/yay.git"
         cd yay
         run_command "makepkg -si --noconfirm"
@@ -106,6 +106,9 @@ main() {
     # Navigate to the scripts directory and run the relevant OS install script
     case "$distro" in
         arch)
+            run_command "bash $SCRIPTS_DIR/install_arch_cli_tools.sh"
+            ;;
+        manjaro)
             run_command "bash $SCRIPTS_DIR/install_arch_cli_tools.sh"
             ;;
         ubuntu)
