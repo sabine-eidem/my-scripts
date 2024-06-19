@@ -23,44 +23,77 @@ my-scripts/
 
 
 
-## Contents
+## Setup Instructions
 
-### `ubuntu-scripts/`
+To set up your development environment, simply run the `setup.sh` script. This script will handle everything, including:
 
-Scripts for Ubuntu-based systems.
+- Detecting your Linux distribution (Arch, Manjaro, or Ubuntu).
+- Installing essential packages.
+- Installing additional packages from the AUR if you are using Arch or Manjaro Linux.
+- Backing up any existing configuration files.
+- Setting up `tmux`, `vim`, and `fish` configurations.
+- Generating and setting up SSH keys.
 
-- `install_packages.sh`: Script to update, upgrade, and install common packages on Ubuntu.
+### Steps to Run the Setup Script
 
-### `arch-scripts/`
+1. **Clone the Repository**:
+    ```bash
+    git clone https://your-repo-url.git
+    cd my-scripts
+    ```
 
-Scripts for Arch-based systems.
+2. **Make the Setup Script Executable**:
+    ```bash
+    chmod +x setup.sh scripts/*.sh
+    ```
 
-- `install_packages.sh`: Script to update, upgrade, and install common packages on Arch/Manjaro.
+3. **Run the Setup Script**:
+    ```bash
+    ./setup.sh
+    ```
 
-### `tmux-config/`
+### What the Setup Script Does
 
-Configuration files for `tmux`.
+- **Detects Linux Distribution**: Determines if you are using Arch, Manjaro, or Ubuntu.
+- **Installs Packages**: Installs essential packages using `pacman` (for Arch and Manjaro) or `apt` (for Ubuntu).
+- **Installs AUR Packages**: If using Arch or Manjaro, installs additional packages from the AUR.
+- **Backs Up Existing Configurations**: Backs up existing `.tmux.conf`, `.vimrc`, and `config.fish` files.
+- **Sets Up Configurations**: Copies new configuration files for `tmux`, `vim`, and `fish`.
+- **Sets Up SSH Keys**: Generates SSH keys and adds them to the SSH agent.
 
-- `.tmux.conf`: Sample configuration file for `tmux`.
+### Example Configuration Scripts
 
-### `vim-config/`
+- **tmux_script.sh**:
+    ```bash
+    #!/bin/bash
+    echo "Setting up tmux configuration..."
+    CONFIG_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    cp "$CONFIG_DIR/.tmux.conf" "$HOME/.tmux.conf"
+    echo "tmux configuration set up successfully."
+    ```
 
-Configuration files for `vim`.
+- **vim_script.sh**:
+    ```bash
+    #!/bin/bash
+    echo "Setting up vim configuration..."
+    CONFIG_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    cp "$CONFIG_DIR/.vimrc" "$HOME/.vimrc"
+    echo "vim configuration set up successfully."
+    ```
 
-- `.vimrc`: Sample configuration file for `vim`.
+- **fish_script.sh**:
+    ```bash
+    #!/bin/bash
+    echo "Setting up fish configuration..."
+    CONFIG_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    mkdir -p "$HOME/.config/fish"
+    cp "$CONFIG_DIR/config.fish" "$HOME/.config/fish/config.fish"
+    echo "fish configuration set up successfully."
+    ```
 
-### `fish-config/`
+## Reboot
 
-Configuration files for `fish shell`.
-
-- `config.fish`: Sample configuration file for `fish shell`.
-
-## Usage
-
-### Cloning the Repository
-
-To clone this repository, run:
+After running the setup script, it is recommended to reboot your system to ensure all changes take effect.
 
 ```bash
-git clone https://github.com/yourusername/my-scripts.git
-cd my-scripts
+sudo reboot
