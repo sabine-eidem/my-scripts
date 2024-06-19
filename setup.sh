@@ -109,7 +109,7 @@ main() {
             run_command "bash $SCRIPTS_DIR/install_arch_cli_tools.sh"
             ;;
         manjaro)
-            run_command "bash $SCRIPTS_DIR/install_arch_cli_tools.sh"
+            run_command "bash $SCRIPTS_DIR/install_manjaro_cli_tools.sh"
             ;;
         ubuntu)
             run_command "bash $SCRIPTS_DIR/install_ubuntu_cli_tools.sh"
