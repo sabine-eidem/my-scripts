@@ -12,6 +12,8 @@ my-scripts/
 │   │   └── .vimrc
 │   └── fish/
 │       └── config.fish
+├── dangerZone/
+    └── reset_customizations.sh
 ├── scripts/
 │   ├── install_arch_cli_tools.sh
 │   ├── install_ubuntu_cli_tools.sh
